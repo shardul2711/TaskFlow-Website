@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { Sun, Moon, Bell, Search, User, Settings, LogOut, Check } from 'lucide-react';
+import { Sun, Moon, Bell, Search, Settings, LogOut, Check } from 'lucide-react';
 import { useTheme } from '../../hooks/useTheme.js';
 import { useAuth } from '../../hooks/useAuth.js';
 import { useTasks } from '../../hooks/useTasks.js';
@@ -188,18 +188,7 @@ const Navbar = () => {
                   </p>
                 </div>
                 
-                <button
-                  type="button"
-                  onClick={() => {
-                    setShowProfileDropdown(false);
-                    navigate('/profile');
-                  }}
-                  className="flex w-full items-center gap-2 px-4 py-2 text-xs font-medium text-slate-650 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700 transition-colors"
-                >
-                  <User className="h-4 w-4" />
-                  My Profile
-                </button>
-                
+
                 <button
                   type="button"
                   onClick={() => {

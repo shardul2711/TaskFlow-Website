@@ -21,7 +21,7 @@ const TaskDetails = lazy(() => import('./pages/TaskDetails.jsx'));
 const CreateTask = lazy(() => import('./pages/CreateTask.jsx'));
 const EditTask = lazy(() => import('./pages/EditTask.jsx'));
 const Analytics = lazy(() => import('./pages/Analytics.jsx'));
-const Profile = lazy(() => import('./pages/Profile.jsx'));
+// const Profile = lazy(() => import('./pages/Profile.jsx'));
 const Settings = lazy(() => import('./pages/Settings.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 
@@ -56,7 +56,7 @@ function App() {
                   <Route path="/tasks/:id" element={<TaskDetails />} />
                   <Route path="/tasks/edit/:id" element={<EditTask />} />
                   <Route path="/analytics" element={<Analytics />} />
-                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/profile" element={<Navigate to="/dashboard" replace />} />
                   <Route path="/settings" element={<Settings />} />
                 </Route>
 

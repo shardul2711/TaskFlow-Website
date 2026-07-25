@@ -5,7 +5,6 @@ import { useTasks } from '../hooks/useTasks.js';
 import { Spinner } from '../components/common/Loader.jsx';
 import Card from '../components/common/Card.jsx';
 import Badge from '../components/common/Badge.jsx';
-import Avatar from '../components/common/Avatar.jsx';
 import Button from '../components/common/Button.jsx';
 import {
   ListTodo,
@@ -18,6 +17,7 @@ import {
   ArrowRight,
   TrendingUp,
   Settings,
+  BarChart3,
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -316,11 +316,11 @@ const Dashboard = () => {
             </button>
 
             <button
-              onClick={() => navigate('/profile')}
+              onClick={() => navigate('/analytics')}
               className="flex flex-col items-center justify-center p-4 rounded-btn border border-border-light dark:border-border-dark bg-slate-50 hover:bg-slate-100 dark:bg-slate-800/30 dark:hover:bg-slate-700/30 text-slate-700 dark:text-slate-350 hover:text-primary dark:hover:text-white transition-all group"
             >
-              <Avatar name={user?.name} src={user?.avatar} size="xs" className="mb-2" />
-              <span className="text-xs font-semibold">My Profile</span>
+              <BarChart3 className="h-5 w-5 mb-2 text-slate-450 dark:text-slate-500 group-hover:text-primary" />
+              <span className="text-xs font-semibold">Analytics</span>
             </button>
 
             <button

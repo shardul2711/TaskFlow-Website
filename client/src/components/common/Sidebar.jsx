@@ -6,7 +6,6 @@ import {
   LayoutDashboard,
   CheckSquare,
   BarChart3,
-  User,
   Settings,
   LogOut,
   ChevronLeft,
@@ -34,7 +33,6 @@ const Sidebar = () => {
     { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
     { name: 'Tasks', path: '/tasks', icon: CheckSquare },
     { name: 'Analytics', path: '/analytics', icon: BarChart3 },
-    { name: 'Profile', path: '/profile', icon: User },
     { name: 'Settings', path: '/settings', icon: Settings },
   ];
 

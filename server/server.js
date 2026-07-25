@@ -30,9 +30,14 @@ connectDB();
 
 // Security and utility Middlewares
 app.use(helmet());
+// Clean up CLIENT_URL to prevent CORS issues with trailing slashes
+const allowedOrigin = process.env.CLIENT_URL 
+  ? process.env.CLIENT_URL.replace(/\/$/, '') 
+  : 'http://localhost:5173';
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: allowedOrigin,
     credentials: true,
   })
 );
